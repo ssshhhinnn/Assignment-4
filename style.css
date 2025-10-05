@@ -76,13 +76,44 @@ body{
 
 footer{ color: var(--gray); }
 
-@media (max-width: 600px){
-  .display{ font-size: 1.6rem; }
+h1{ font-size:24px; }
+p{ font-size:16px; }
+
+@media (max-width: 576px) {
+  h1 { font-size: 20px; }
+  p { font-size: 14px; }
   .logo-bubble{ width:36px;height:36px; font-size:14px; }
+  .display{ font-size: 1.6rem; }
 }
-@media (min-width: 601px) and (max-width: 992px){
+@media (min-width: 577px) and (max-width: 992px) {
+  h1 { font-size: 28px; }
+  p { font-size: 18px; }
   .display{ font-size: 2.1rem; }
 }
-@media (min-width: 993px){
+@media (min-width: 993px) {
+  h1 { font-size: 36px; }
+  p { font-size: 20px; }
   .container{ max-width: 1100px; }
+}
+
+.mq-layout{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box{
+  background: #343a40;
+  color: white;
+  border: 1px solid #555;
+  padding: 30px;
+  flex: 1;
+  text-align: center;
+  min-width: 100%;
+  border-radius: 10px;
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .box{ min-width: 48%; }
+}
+@media (min-width: 993px) {
+  .box{ min-width: 32%; }
 }
